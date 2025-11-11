@@ -1,5 +1,11 @@
+import ContactForm from "./components/ContactForm";
+
 function App() {
-  return <div className="bg-red-600">App</div>;
+  return (
+    <div>
+      <ContactForm />
+    </div>
+  );
 }
 
 export default App;
