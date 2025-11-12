@@ -41,3 +41,7 @@ button[type="submit"] {
 .error {
   @apply text-primary-red mt-1;
 }
+
+.required {
+  @apply text-primary-green-600;
+}

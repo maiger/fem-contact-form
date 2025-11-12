@@ -4,26 +4,34 @@ function ContactForm() {
       <h2 className="mb-6">Contact Us</h2>
       <div className="flex justify-between gap-3 mb-4">
         <div className="flex flex-col w-full">
-          <label>First Name</label>
+          <label>
+            First Name <span className="required">*</span>
+          </label>
           <input type="text" />
           <p className="error">This field is required</p>
         </div>
         <div className="flex flex-col w-full">
-          <label>Last Name</label>
+          <label>
+            Last Name <span className="required">*</span>
+          </label>
           <input type="text" />
           <p className="error">This field is required</p>
         </div>
       </div>
 
       <div className="flex flex-col mb-4">
-        <label>Email Address</label>
+        <label>
+          Email Address <span className="required">*</span>
+        </label>
         <input type="text" />
         <p className="error">Please enter a valid email address</p>
         <p className="error">This field is required</p>
       </div>
 
       <div className="flex flex-col mb-4">
-        <p className="mb-2">Query Type</p>
+        <p className="mb-2">
+          Query Type <span className="required">*</span>
+        </p>
         <div className="flex justify-between gap-3">
           <div className="query-type-box flex w-full p-2 ">
             <input type="radio" />
@@ -38,15 +46,20 @@ function ContactForm() {
       </div>
 
       <div className="flex flex-col mb-4">
-        <label>Message</label>
+        <label>
+          Message <span className="required">*</span>
+        </label>
         <textarea rows={2} />
         <p className="error">This field is required</p>
       </div>
 
       <div className="flex flex-col mb-4">
         <div>
-          <input type="radio" />
-          <label>I consent to being contacted by the team</label>
+          <input type="checkbox" />
+          <label className="ml-4">
+            I consent to being contacted by the team{" "}
+            <span className="required">*</span>
+          </label>
         </div>
         <p className="error">
           To submit this form, please consent to being contacted
