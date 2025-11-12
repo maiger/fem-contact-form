@@ -2,7 +2,7 @@ import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
-    <div>
+    <div className="flex justify-center">
       <ContactForm />
     </div>
   );

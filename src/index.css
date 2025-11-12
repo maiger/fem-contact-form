@@ -11,5 +11,33 @@
 }
 
 body {
-  @apply bg-primary-green-200;
+  @apply bg-primary-green-200 text-neutral-gray-900;
+}
+
+h2 {
+  @apply text-2xl font-bold;
+}
+
+label,
+p {
+  @apply text-base;
+}
+
+label {
+  @apply mb-2;
+}
+
+input[type="text"],
+textarea,
+.query-type-box {
+  @apply rounded-md border border-neutral-gray-500 h-10;
+}
+
+button,
+button[type="submit"] {
+  @apply cursor-pointer rounded-md w-full bg-primary-green-600 px-6 py-2 text-neutral-white hover:brightness-75;
+}
+
+.error {
+  @apply text-primary-red mt-1;
 }
