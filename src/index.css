@@ -28,14 +28,25 @@ label {
 }
 
 input[type="text"],
+input[type="email"],
 textarea,
 .query-type-box {
   @apply rounded-md border border-neutral-gray-500 h-10;
 }
 
+input.input-error,
+textarea.input-error {
+  @apply border-primary-red;
+}
+
 button,
 button[type="submit"] {
   @apply cursor-pointer rounded-md w-full bg-primary-green-600 px-6 py-2 text-neutral-white hover:brightness-75;
+}
+
+button:disabled,
+button[type="submit"]:disabled {
+  @apply opacity-50;
 }
 
 .error {
