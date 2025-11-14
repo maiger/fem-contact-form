@@ -16,15 +16,6 @@ const schema = z.object({
 
 type FormFields = z.infer<typeof schema>;
 
-// type FormFields = {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-//   queryType: string;
-//   message: string;
-//   consent: boolean;
-// };
-
 function ContactForm() {
   const {
     register,
@@ -67,10 +58,11 @@ function ContactForm() {
       <h2 className="mb-6">Contact Us</h2>
       <div className="flex flex-col sm:flex-row justify-between gap-3 mb-4">
         <div className="flex flex-col w-full">
-          <label>
+          <label htmlFor="firstName">
             First Name <span className="required">*</span>
           </label>
           <input
+            id="firstName"
             className={errors.firstName ? "input-error" : ""}
             {...register("firstName")}
             type="text"
@@ -80,10 +72,11 @@ function ContactForm() {
           )}
         </div>
         <div className="flex flex-col w-full">
-          <label>
+          <label htmlFor="lastName">
             Last Name <span className="required">*</span>
           </label>
           <input
+            id="lastName"
             className={errors.lastName ? "input-error" : ""}
             {...register("lastName")}
             type="text"
@@ -95,10 +88,11 @@ function ContactForm() {
       </div>
 
       <div className="flex flex-col mb-4">
-        <label>
+        <label htmlFor="email">
           Email Address <span className="required">*</span>
         </label>
         <input
+          id="email"
           className={errors.email ? "input-error" : ""}
           {...register("email")}
           type="email"
@@ -143,10 +137,11 @@ function ContactForm() {
       </div>
 
       <div className="flex flex-col mb-4">
-        <label>
+        <label htmlFor="message">
           Message <span className="required">*</span>
         </label>
         <textarea
+          id="message"
           className={errors.message ? "input-error" : ""}
           {...register("message")}
           rows={5}
@@ -174,7 +169,7 @@ function ContactForm() {
         {isSubmitting ? "Sending..." : "Submit"}
       </button>
 
-      <div className="text-sm text-gray-400 mt-4">
+      <div className="text-sm text-gray-500 mt-4">
         Challenge by{" "}
         <a href="https://www.frontendmentor.io?ref=challenge">
           Frontend Mentor
