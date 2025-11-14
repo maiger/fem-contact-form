@@ -113,13 +113,14 @@ function ContactForm() {
         <div className="flex flex-col sm:flex-row justify-between gap-3">
           <div className="query-type-box flex w-full p-2 ">
             <input
+              className="bg-blue-600"
               {...register("queryType")}
               id="general"
               value={"general"}
               type="radio"
               name="queryType"
             />
-            <label className="ml-2" htmlFor="general">
+            <label className="pl-2" htmlFor="general">
               General Enquiry
             </label>
           </div>
@@ -148,7 +149,7 @@ function ContactForm() {
         <textarea
           className={errors.message ? "input-error" : ""}
           {...register("message")}
-          rows={2}
+          rows={5}
         />
         {errors.message && <p className="error">{errors.message.message}</p>}
       </div>
@@ -173,7 +174,7 @@ function ContactForm() {
         {isSubmitting ? "Sending..." : "Submit"}
       </button>
 
-      <div className="text-sm text-gray-400">
+      <div className="text-sm text-gray-400 mt-4">
         Challenge by{" "}
         <a href="https://www.frontendmentor.io?ref=challenge">
           Frontend Mentor
