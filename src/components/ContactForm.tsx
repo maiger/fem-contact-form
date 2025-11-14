@@ -144,8 +144,13 @@ function ContactForm() {
 
       <div className="flex flex-col mb-4">
         <div>
-          <input id="consent" {...register("consent")} type="checkbox" />
-          <label htmlFor="consent" className="ml-4">
+          <input
+            className="cursor-pointer"
+            id="consent"
+            {...register("consent")}
+            type="checkbox"
+          />
+          <label htmlFor="consent" className="ml-4 cursor-pointer">
             I consent to being contacted by the team{" "}
             <span className="required">*</span>
           </label>
@@ -159,13 +164,13 @@ function ContactForm() {
 
       <p>Message Sent!</p>
       <p>Thanks for completing the form. We'll be in touch soon!</p>
-      {/* <div>
+      <div className="text-sm text-gray-400">
         Challenge by{" "}
         <a href="https://www.frontendmentor.io?ref=challenge">
           Frontend Mentor
         </a>
         . Coded by <a href="www.github.com/maiger">Maiger</a>.
-      </div> */}
+      </div>
     </form>
   );
 }
