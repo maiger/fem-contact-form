@@ -60,3 +60,7 @@ button[type="submit"]:disabled {
 .required {
   @apply text-primary-green-600;
 }
+
+.toast-message {
+  @apply text-sm;
+}

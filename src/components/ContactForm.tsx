@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { z } from "zod";
+import toast from "react-hot-toast";
 
 const schema = z.object({
   firstName: z.string().min(1, { message: "This field is required" }),
@@ -39,6 +40,16 @@ function ContactForm() {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       // throw new Error();
       console.log(data);
+      toast.success(
+        <div>
+          <div>
+            <h3>Message sent!</h3>
+          </div>
+          <p className="toast-message">
+            Thanks for completing the form. We'll be in touch soon!
+          </p>
+        </div>
+      );
     } catch (error) {
       // Backend error
       console.log(error);
@@ -162,8 +173,6 @@ function ContactForm() {
         {isSubmitting ? "Sending..." : "Submit"}
       </button>
 
-      <p>Message Sent!</p>
-      <p>Thanks for completing the form. We'll be in touch soon!</p>
       <div className="text-sm text-gray-400">
         Challenge by{" "}
         <a href="https://www.frontendmentor.io?ref=challenge">
