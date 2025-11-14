@@ -54,7 +54,7 @@ function ContactForm() {
       onSubmit={handleSubmit(onSubmit)}
     >
       <h2 className="mb-6">Contact Us</h2>
-      <div className="flex justify-between gap-3 mb-4">
+      <div className="flex flex-col sm:flex-row justify-between gap-3 mb-4">
         <div className="flex flex-col w-full">
           <label>
             First Name <span className="required">*</span>
@@ -99,7 +99,7 @@ function ContactForm() {
         <p className="mb-2">
           Query Type <span className="required">*</span>
         </p>
-        <div className="flex justify-between gap-3">
+        <div className="flex flex-col sm:flex-row justify-between gap-3">
           <div className="query-type-box flex w-full p-2 ">
             <input
               {...register("queryType")}
