@@ -3,7 +3,7 @@ import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <div className="flex justify-center">
+    <main className="flex justify-center">
       <ContactForm />
       <Toaster
         toastOptions={{
@@ -20,7 +20,7 @@ function App() {
           },
         }}
       />
-    </div>
+    </main>
   );
 }
 

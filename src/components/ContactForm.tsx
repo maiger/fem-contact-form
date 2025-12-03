@@ -57,7 +57,9 @@ function ContactForm() {
     >
       <h2 className="mb-6">Contact Us</h2>
       <div className="flex flex-col sm:flex-row justify-between gap-3 mb-4">
+        {/* Names */}
         <div className="flex flex-col w-full">
+          {/* First Name */}
           <label htmlFor="firstName">
             First Name <span className="required">*</span>
           </label>
@@ -72,6 +74,7 @@ function ContactForm() {
           )}
         </div>
         <div className="flex flex-col w-full">
+          {/* Last Name */}
           <label htmlFor="lastName">
             Last Name <span className="required">*</span>
           </label>
@@ -87,6 +90,7 @@ function ContactForm() {
         </div>
       </div>
 
+      {/* Email */}
       <div className="flex flex-col mb-4">
         <label htmlFor="email">
           Email Address <span className="required">*</span>
@@ -100,17 +104,19 @@ function ContactForm() {
         {errors.email && <p className="error">{errors.email.message}</p>}
       </div>
 
-      <div className="flex flex-col mb-4">
-        <p className="mb-2">
+      {/* Query Type */}
+      <fieldset className="flex flex-col mb-4">
+        <legend className="mb-2">
           Query Type <span className="required">*</span>
-        </p>
+        </legend>
         <div className="flex flex-col sm:flex-row justify-between gap-3">
-          <div className="query-type-box flex w-full p-2 ">
+          {/* General */}
+          <div className="query-type-box flex items-center w-full p-2">
             <input
               className="bg-blue-600"
               {...register("queryType")}
               id="general"
-              value={"general"}
+              value="general"
               type="radio"
               name="queryType"
             />
@@ -118,11 +124,12 @@ function ContactForm() {
               General Enquiry
             </label>
           </div>
-          <div className="query-type-box flex w-full p-2">
+          {/* Support */}
+          <div className="query-type-box flex items-center w-full p-2">
             <input
               {...register("queryType")}
               id="support"
-              value={"support"}
+              value="support"
               type="radio"
               name="queryType"
             />
@@ -134,8 +141,9 @@ function ContactForm() {
         {errors.queryType && (
           <p className="error">{errors.queryType.message}</p>
         )}
-      </div>
+      </fieldset>
 
+      {/* Message */}
       <div className="flex flex-col mb-4">
         <label htmlFor="message">
           Message <span className="required">*</span>
@@ -144,11 +152,12 @@ function ContactForm() {
           id="message"
           className={errors.message ? "input-error" : ""}
           {...register("message")}
-          rows={5}
+          rows={3}
         />
         {errors.message && <p className="error">{errors.message.message}</p>}
       </div>
 
+      {/* Consent */}
       <div className="flex flex-col mb-4">
         <div>
           <input
@@ -165,10 +174,12 @@ function ContactForm() {
         {errors.consent && <p className="error">{errors.consent.message}</p>}
       </div>
 
+      {/* Submit */}
       <button disabled={isSubmitting} type="submit">
         {isSubmitting ? "Sending..." : "Submit"}
       </button>
 
+      {/* Attribute */}
       <div className="text-sm text-gray-500 mt-4">
         Challenge by{" "}
         <a href="https://www.frontendmentor.io?ref=challenge">

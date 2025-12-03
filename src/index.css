@@ -11,16 +11,11 @@
 }
 
 body {
-  @apply bg-primary-green-200 text-neutral-gray-900 accent-primary-green-600;
+  @apply bg-primary-green-200 text-neutral-gray-900 accent-primary-green-600 text-base;
 }
 
 h2 {
   @apply text-2xl font-bold;
-}
-
-label,
-p {
-  @apply text-base;
 }
 
 label {
